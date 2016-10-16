@@ -1,0 +1,16 @@
+#search {
+
+	width: 70%;
+}
+
+#result {
+	width: 70%;
+}
+
+.form-control {
+	border-radius: 0;
+}
+
+.input-group {
+	border-radius: 0;
+}

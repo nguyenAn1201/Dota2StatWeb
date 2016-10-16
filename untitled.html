@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Hello</title>
+	</head>
+	<script src="jquery-3.1.1.min.js">
+		$.ajax({
+	url: 'https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?key=17F8FFF1EEB567E26393742D9DC47132&account_id=76561198012171408',
+	data: {
+		format: 'json'
+	},
+	error: function() {
+		window.alert("Error");
+	},
+	dataType: 'json',
+	success: function(data) {
+		var $match_ID = $('<h1>').text(matches.match_id);
+		var $lobby_Type = $('<p>'.text(matches.lobby_type);
+		$('body')
+			.append($match_ID)
+			.append($lobby_Type);
+	},
+	type: 'GET'
+});
+	</script>
+	<body>
+	
+		<div id="info">
+		<h1></h1>
+		<p></p>
+		
+		</div>
+	</body>
+</html>
