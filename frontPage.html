@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Dota 2 Web</title>
+		<title>Dota 2 </title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 		<link rel="stylesheet" type="text/css" href="custom.css">
-	<script src="jquery-3.1.1.min.js">
+	
+		<script src="jquery-3.1.1.min.js">
 		$.ajax({
 	url: 'https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?key=17F8FFF1EEB567E26393742D9DC47132&account_id=76561198012171408',
 	data: {
@@ -24,11 +25,11 @@
 	},
 	type: 'GET'
 });
-	</script>
+		</script>
 	
 	</head>
-	<body style="background-color:red" >
-		<div class="container" id="search" style="background-color: blue">
+	<body>
+		<div class="container" id="search">
 			<div class="row">
     				<h2 class="text-center">Dota 2 Web</h2>
     					<form>
@@ -40,7 +41,7 @@
 			</div>
 		</div>
 		
-		<div class="container" id="result" style="background-color: green">
+		<div class="container" id="result">
 			<table class="table  table-hover table-bordered">
  			<thead>
    				<tr>

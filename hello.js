@@ -1,4 +1,4 @@
-/*$(document).ready(function() {
+ /*$(document).ready(function() {
 	$.ajax({
 		url: "https://api.opendota.com/api/matches/2702244240"
 	}).then(function(data) {
