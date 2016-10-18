@@ -1,31 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Dota 2 </title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+		<title>Dota 2 Web</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="custom.css">
-	
-		<script src="jquery-3.1.1.min.js">
-		$.ajax({
-	url: 'https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?key=17F8FFF1EEB567E26393742D9DC47132&account_id=76561198012171408',
-	data: {
-		format: 'json'
-	},
-	error: function() {
-		window.alert("Error");
-	},
-	dataType: 'jsonp',
-	success: function(data) {
-		var $title = $('<h1>').text(data.talks[0].talk_title);
-		var $description = $('<p>.text(data.talk[0].talk_description');
-		$('#info')
-			.append($title)
-			.append($descriptionn);
-	},
-	type: 'GET'
-});
-		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="getMatch.js"></script>
 	
 	</head>
 	<body>
