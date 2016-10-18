@@ -2,92 +2,38 @@
 <html>
 	<head>
 		<title>Dota 2 </title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="custom.css">
-	
-		<script src="jquery-3.1.1.min.js">
-		$.ajax({
-	url: 'https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?key=17F8FFF1EEB567E26393742D9DC47132&account_id=76561198012171408',
-	data: {
-		format: 'json'
-	},
-	error: function() {
-		window.alert("Error");
-	},
-	dataType: 'jsonp',
-	success: function(data) {
-		var $title = $('<h1>').text(data.talks[0].talk_title);
-		var $description = $('<p>.text(data.talk[0].talk_description');
-		$('#info')
-			.append($title)
-			.append($descriptionn);
-	},
-	type: 'GET'
-});
+		<script src="jquery-3.1.1.min.js"></script>
+		<script src="getmatch.js"></script>
+
 		</script>
 	
 	</head>
 	<body>
 		<div class="container" id="search">
-			<div class="row">
+			
     				<h2 class="text-center">Dota 2 Web</h2>
     					<form>
     						<div class="form-group input-lg">
     							<input type="search" class="form-control" placeholder="SteamID">
+    							<span class="input-group-btn">
+        						<button id="search-button" class="btn btn-primary" type="button">Go!</button>
+   								</span>
     						</div>
-    					</form>
-            		
-			</div>
+    				</form>
 		</div>
 		
 		<div class="container" id="result">
 			<table class="table  table-hover table-bordered">
  			<thead>
    				<tr>
-     		   		<th style="width: 10%"> Hero </th>
-     		   		<th style="width: 20%"> Duration </th>
-     		   		<th style="width: 90%">  </th>
-		   			<th style="width: 10%"> Type </th>
-      				<th style="width: 10%"> Result </th>
+     		   		
       			</tr>
  			</thead>
  			<tbody>
-  		  		<tr>
-   		   			<td> idk </td>
-   		   			<td> ? </td>
-		   			<td style="width:5%"> sed auctor diam sollicitudin ut. Donec et sodales quam, eu vehicula urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer egetsdsdfsdf fsdfsdf</td>
-		   			<th> ? </th>
-		   			<td> KDA </td>
-    			</tr>
-		  		<tr>
-   		   			<td> ????</td>
-   		   			<td> ? </td>
-				   	<td style="width:5%"> sed auctor diam sollicitudin ut. Donec et sodales quam, eu vehicula urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer egetsdsdfsdf fsdfsdf</td>
-					<th> ? </th>
-					<td> K/D/A </td>
-    			</tr>
-    			<tr>
-   		  			<td> idk </td>
-   		  			<td> ? </td>
-				   	<td style="width:5%"> sed auctor diam sollicitudin ut. Donec et sodales quam, eu vehicula urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer egetsdsdfsdf fsdfsdf</td>
-				    <th> ? </th>
-			 	    <td> KDA </td>
-    	   		</tr>
-		  		<tr>
-   		   			<td> idk </td>
-   		   			<td> ? </td>
-					<td style="width:5%"> sed auctor diam sollicitudin ut. Donec et sodales quam, eu vehicula urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer egetsdsdfsdf fsdfsdf</td>
-            	    <th> ? </th>
-		 			<td> KDA </td>
-    			</tr>
-          	    <tr>
-   		  		    <td> idk </td>
-   		  		    <td> ? </td>
-					<td style="width:5%"> sed auctor diam sollicitudin ut. Donec et sodales quam, eu vehicula urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer egetsdsdfsdf fsdfsdf</td>
-		  			<th> ? </th>
-		  			<td> KDA </td>
-    			</tr>
+  		  		
  			 </tbody>
 		</table>		
 		</div>
