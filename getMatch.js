@@ -13,12 +13,22 @@ $(document).ready(function() {
         tr = $('<tr/>');
         tr.append("<td>" + data[i].hero_id + "</td>");
         tr.append("<td>" + secondsTimeSpanToHMS(data[i].duration) + "</td>");
-        tr.append("<td>" + data[i].radiant_win + "</td>");
-
-        if (data[i].game_mode == 22) {
-          tr.append("<td> Ranked </td>");
+        /*Output WIN or LOSS*/
+        if (data[i].radiant_win==true && data[i].player_slot <128) {
+          tr.append("<td><font color='green'> WIN</font></td>");
+        } else if (data[i].radiant_win==true && data[i].player_slot >=128) {
+          tr.append("<td><font color='red'> LOSS</font> </td>");
+        } else if (data[i].radiant_win==false && data[i].player_slot <128) {
+          tr.append("<td><font color='red'> LOSS</font> </td>");
         } else {
-          tr.append("<td> Normal </td>");
+          tr.append("<td><font color='green'> WIN</font> </td>");
+        }      
+       
+
+        if (data[i].game_mode == 22) {  /*Determine Normal or Ranked game*/
+          tr.append("<td class='text-xs-center'> Ranked </td>");
+        } else {
+          tr.append("<td class='text-xs-center'> Normal </td>");
         }
         tr.append("<td>" + data[i].kills + "/" + data[i].deaths + "/" + data[i].assists);
         
