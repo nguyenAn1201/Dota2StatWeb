@@ -29,7 +29,7 @@
         ]);
 
         
-        var options = {title:'Networth Distribution in Radiant Team',
+        var options = {title:'Distribution of GPM in Radiant Team',
                        width:400,
                        height:300};
 
@@ -40,10 +40,8 @@
       function drawDireChart() {
 
         // Create the data table for Sarah's pizza.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Roles');
-        data.addColumn('number', 'Networth');
-        data.addRows([
+        var data = new google.visualization.arrayToDataTable([
+          ['Postion', 'XPM'],
           ['Middle', 1000],
           ['Support 1', 453], ///NEED EDIT///
           ['Support 2', 235],
@@ -52,11 +50,10 @@
         ]);
 
         
-        var options = {title:'Networth Distribution in Dire Team',
-                       width:400,
-                       height:300};
+        var options = {title:'Distribution of XPM in Dire Team',
+                       is3D: true,
+        };
 
-        
         var chart = new google.visualization.PieChart(document.getElementById('Dire_chart_div'));
         chart.draw(data, options);
       }
@@ -92,7 +89,8 @@
           colors: ['#4d4dff', '#cc0000'],
           hAxis: {
             title: 'Total Damage',
-            minValue: 0
+            minValue: 0 /////HERO////
+
           },
           vAxis: {
             title: 'Team'
@@ -107,8 +105,8 @@
     <!--Table and divs that hold the pie charts-->
     <table class="columns">
       <tr>
-        <td><div id="Radiant_chart_div" style="border: 0px solid #ccc"></div></td>
-        <td><div id="Dire_chart_div" style="border: 0px solid #ccc"></div></td>
+        <td><div id="Radiant_chart_div" style="border: 0px solid #ccc; width: 600px;"></div></td>
+        <td><div id="Dire_chart_div" style="border: 0px solid #ccc; width: 500px;"></td></div>
       </tr>
         <tr>
         <td><div id="Wow_div" style="width: 600px; height: 500px;"></div></td>
