@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      
+      google.charts.load('current', {'packages':['corechart']});
+
+     
+      google.charts.setOnLoadCallback(drawRadiantChart);
+
+      
+      google.charts.setOnLoadCallback(drawDireChart);
+
+      google.charts.setOnLoadCallback(drawDopeGraph);
+      function drawRadiantChart() {
+
+        // Create the data table for Sarah's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Roles');
+        data.addColumn('number', 'Networth');
+        data.addRows([
+          ['Middle', 550],
+          ['Support 1', 330],
+          ['Support 2', 400],
+          ['Offlane', 500],
+          ['Carry', 765]
+        ]);
+
+        
+        var options = {title:'Networth Distribution in Radiant Team',
+                       width:400,
+                       height:300};
+
+        
+        var chart = new google.visualization.PieChart(document.getElementById('Radiant_chart_div'));
+        chart.draw(data, options);
+      }
+      function drawDireChart() {
+
+        // Create the data table for Sarah's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Roles');
+        data.addColumn('number', 'Networth');
+        data.addRows([
+          ['Middle', 1000],
+          ['Support 1', 453], ///NEED EDIT///
+          ['Support 2', 235],
+          ['Offlane', 847],
+          ['Carry', 1200]
+        ]);
+
+        
+        var options = {title:'Networth Distribution in Dire Team',
+                       width:400,
+                       height:300};
+
+        
+        var chart = new google.visualization.PieChart(document.getElementById('Dire_chart_div'));
+        chart.draw(data, options);
+      }
+      function drawDopeGraph(){
+        var data = google.visualization.arrayToDataTable([
+          ['Offlane', 'Support', 'Support', 'Mid', 'Carry'],
+          [12323,       4356,     6578,     20249,      32914],
+          [15356,       6402,     8927,     23415,      30284],    //May put this one in loading page under the table//
+          ]);
+        var options = {
+          title: 'Comparing networth of players of both sides',
+          tAxis: {title: 'Networth'},
+          nAxis: {title: 'Team'},
+          seriesType: 'bars',
+          series: {5: {type: 'point'}}
+        };
+        var chart = new google.visualization.ComboChart(document.getElementById('Wow_div'));
+        chart.draw(data,options);
+      }
+      
+    </script>
+  </head>
+  <body>
+    <!--Table and divs that hold the pie charts-->
+    <table class="columns">
+      <tr>
+        <td><div id="Radiant_chart_div" style="border: 1px solid #ccc"></div></td>
+        <td><div id="Dire_chart_div" style="border: 1px solid #ccc"></div></td>
+      </tr>
+        <tr>
+        <td><div id="Wow_div" style="width: 600px; height: 500px;"></div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
