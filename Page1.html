@@ -3,16 +3,17 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
 
-      
-      google.charts.load('current', {'packages':['corechart']});
-
+      ////NEED JQUERY//
+      google.charts.load('current', {'packages':['corechart','bar']});
      
       google.charts.setOnLoadCallback(drawRadiantChart);
 
-      
       google.charts.setOnLoadCallback(drawDireChart);
 
       google.charts.setOnLoadCallback(drawDopeGraph);
+
+      google.charts.setOnLoadCallback(drawBarChart);
+
       function drawRadiantChart() {
 
         // Create the data table for Sarah's pizza.
@@ -59,6 +60,7 @@
         var chart = new google.visualization.PieChart(document.getElementById('Dire_chart_div'));
         chart.draw(data, options);
       }
+
       function drawDopeGraph(){
         var data = google.visualization.arrayToDataTable([
           ['Offlane', 'Support', 'Support', 'Mid', 'Carry'],
@@ -75,19 +77,44 @@
         var chart = new google.visualization.ComboChart(document.getElementById('Wow_div'));
         chart.draw(data,options);
       }
-      
+     
+      function drawBarChart(){
+        var data = google.visualization.arrayToDataTable([
+          ['Team', 'Radiant', 'Dire'],
+          ['Carry', 20234,      18104],
+          ['Support1', 0,         642],
+          ['Support2', 2435,      5024],
+          ['Offlane',  28029,     12934 ]
+          ]);
+        var options = {
+          title: 'Total tower damage dealt by role in each Team',
+          chartArea: {width: '50%'},
+          colors: ['#4d4dff', '#cc0000'],
+          hAxis: {
+            title: 'Total Damage',
+            minValue: 0
+          },
+          vAxis: {
+            title: 'Team'
+          }
+        };
+        var chart = new google.visualization.BarChart(document.getElementById('bar_div'));
+        chart.draw(data,options);
+      }
     </script>
   </head>
   <body>
     <!--Table and divs that hold the pie charts-->
     <table class="columns">
       <tr>
-        <td><div id="Radiant_chart_div" style="border: 1px solid #ccc"></div></td>
-        <td><div id="Dire_chart_div" style="border: 1px solid #ccc"></div></td>
+        <td><div id="Radiant_chart_div" style="border: 0px solid #ccc"></div></td>
+        <td><div id="Dire_chart_div" style="border: 0px solid #ccc"></div></td>
       </tr>
         <tr>
-        <td><div id="Wow_div" style="width: 600px; height: 500px;"></div>
-        </td>
+        <td><div id="Wow_div" style="width: 600px; height: 500px;"></div></td>
+      </tr>
+      <tr>
+      <td><div id = 'bar_div' style="width: 600px, height: 550px;"></div></td>
       </tr>
     </table>
   </body>
