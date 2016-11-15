@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stat</title>
+		<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script><!-- Tether for Bootstrap --> 
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+        <script>
+        	
+
+		
+        	$(document).ready(function() {
+        		$.getJSON("https://api.opendota.com/api/players/" +166044481+ "/matches", function(data) {
+        			for (var i=0; i<10; i++) {
+				      			$('.container').append(
+				      			 
+				        		'<p style="color: red">' + data[i].hero_id +'</p>' 
+				      		);		
+    					 
+        		  		$.getJSON("https://raw.githubusercontent.com/odota/dotaconstants/master/json/heroes.json", function(result) {
+        		  			'<p style="color: red">' + result[i].img +'</p>' 
+     					 	 
+        		  	});
+        		  	}
+
+    			});
+        	});
+    	
+			
+    </script>
+	
+	</head>
+	<body style="background-color: #141414">
+
+	<div class="container" style="width: 80%; margin-top: 50px;">
+		
+	</div> <!--container-->
+
+		
+
+	</body>
+</html>
