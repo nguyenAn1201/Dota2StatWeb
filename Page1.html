@@ -2,6 +2,10 @@
   <head>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
+    //$.getJSON("https://api.opendota.com/api/matches/2756880995", function(data) {
+    //	var hoppoDmg = data.players[0].hero_damage;
+    //	console.log(hoppoDmg);
+    //});
 
       ////NEED JQUERY//
       google.charts.load('current', {'packages':['corechart','bar']});
@@ -16,7 +20,7 @@
 
       google.charts.setOnLoadCallback(drawScatter);
 
-      function drawRadiantChart() {
+      function drawRadiantChart(i) {
 
         // Create the data table for Sarah's pizza.
         var data = new google.visualization.DataTable();
@@ -101,8 +105,6 @@
         var chart = new google.visualization.BarChart(document.getElementById('bar_div'));
         chart.draw(data,options);
       }
-
-  
     </script>
   </head>
   <body style = "background-color: #141414">
