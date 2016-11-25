@@ -14,6 +14,8 @@
 
       google.charts.setOnLoadCallback(drawBarChart);
 
+      google.charts.setOnLoadCallback(drawScatter);
+
       function drawRadiantChart() {
 
         // Create the data table for Sarah's pizza.
@@ -65,7 +67,7 @@
           [15356,       6402,     8927,     23415,      30284],    //May put this one in loading page under the table//
           ]);
         var options = {
-          title: 'Comparing networth of players of both sides',
+          title: 'Radiant vs Dire Networth',
           tAxis: {title: 'Networth'},
           nAxis: {title: 'Team'},
           seriesType: 'bars',
@@ -99,21 +101,19 @@
         var chart = new google.visualization.BarChart(document.getElementById('bar_div'));
         chart.draw(data,options);
       }
+
+  
     </script>
   </head>
-  <body>
+  <body style = "background-color: #141414">
     <!--Table and divs that hold the pie charts-->
     <table class="columns">
       <tr>
         <td><div id="Radiant_chart_div" style="border: 0px solid #ccc; width: 600px;"></div></td>
-        <td><div id="Dire_chart_div" style="border: 0px solid #ccc; width: 500px;"></td></div>
+        <td><div id="Dire_chart_div" style="border: 0px solid #ccc; width: 420px; height: 300px"></td></div>
       </tr>
-        <tr>
         <td><div id="Wow_div" style="width: 600px; height: 500px;"></div></td>
-      </tr>
-      <tr>
-      <td><div id = 'bar_div' style="width: 600px, height: 550px;"></div></td>
-      </tr>
+        <td><div id = 'bar_div' style="width: 600px, height: 600px;"></div></td>
     </table>
   </body>
 </html>
