@@ -1,6 +1,8 @@
 
 #result {
 	width: 70%;
+	/*height: 300px;
+	overflow-y: scroll;*/
 }
 
 .form-control {
@@ -19,7 +21,24 @@
 }
 
 body {
-	background-image: url("https://hydra-media.cursecdn.com/dota2.gamepedia.com/3/30/Fall_2016_Battle_Pass_Loading_Screen_III_16x9.png?version=34ffe64e39dc5026a50563eb138b6d49");
-	background-repeat: no-repeat; 
-	background-size: cover; /*cover the full page*/
+    background-image:url("https://hydra-media.cursecdn.com/dota2.gamepedia.com/3/30/Fall_2016_Battle_Pass_Loading_Screen_III_16x9.png");
+   	/*https://www.opendota.com/assets/images/home-background.png*/
+   	/*http://cdn.dota2.com/apps/dota2/images/blogfiles/bg_thebetaisover.jpg*/
+   	/*http://img05.deviantart.net/3a10/i/2015/093/d/2/dota_2_by_ab7tosun-d8oat0t.jpg*/
+   	/*https://hydra-media.cursecdn.com/dota2.gamepedia.com/3/30/Fall_2016_Battle_Pass_Loading_Screen_III_16x9.png*/
+   	/*http://i.imgur.com/rvaOkaO.jpg*/
+   	background-attachment: fixed;
+   	background-repeat: no-repeat;
+	background-size: cover;   
 }
+
+
+table{
+ height:591px;              // <-- Select the height of the table
+}
+tbody{
+  overflow-y: scroll;      
+  height: 200px;            //  <-- Select the height of the body
+  position: absolute;
+}
+  
