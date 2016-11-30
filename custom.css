@@ -1,0 +1,26 @@
+
+#result {
+	width: 70%;
+}
+
+.form-control {
+	border-radius: 0;
+	width: 50%;
+}
+
+.input-group {
+	border-radius: 0;
+}
+
+
+
+#search-button {
+	border-radius: 0;
+}
+
+body {
+	background-image: url("");
+	background-repeat: no-repeat; 
+	background-size: cover; /*cover the full page*/
+	/*http://img05.deviantart.net/3a10/i/2015/093/d/2/dota_2_by_ab7tosun-d8oat0t.jpg*/
+}
