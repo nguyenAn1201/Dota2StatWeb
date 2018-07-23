@@ -1,5 +1,4 @@
-# DEPRECATED 
-#Dota2Stat
+# Dota2Stat (DEPRECATED)
  
 Description: Data visualization for a multiplayer game (Dota 2 by Valve). Website is called Dota2Stat which was hosted using Heroku.
 
